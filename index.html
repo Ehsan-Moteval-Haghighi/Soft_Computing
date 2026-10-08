@@ -1,81 +1,297 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ehsan Motevali Haghighi - McMaster University</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body, main, .sidebar {
-            font-family: 'Roboto', sans-serif;
-        }
-        .content h2 {
-            font-weight: 700;
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-        .content p {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .sidebar h2 {
-            font-weight: 700;
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-        .sidebar ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .sidebar ul li {
-            margin-bottom: 10px;
-        }
-        .sidebar ul li a {
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 14px;
-            color: #000;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <img src="IMG_4420.jpg" alt="Your Image" class="header-img">
-            <div class="header-text">
-                <h1>Ehsan Motevali Haghighi</h1>
-                <p>McMaster University</p>
-            </div>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ehsan Motevali Haghighi - Machine Learning Portfolio</title>
+    <meta
+      name="description"
+      content="Machine learning portfolio for Ehsan Motevali Haghighi, focused on data preparation, model development, uncertainty, QC, evaluation, and scientific ML."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">
+        <span class="brand-mark">EMH</span>
+        <span>Machine Learning Portfolio</span>
+      </a>
+      <nav>
+        <a href="#skills">ML Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+      </nav>
     </header>
-    <main>
-        <div class="sidebar">
-            <h2>Links</h2>
-            <ul>
-                <li><a href="index.html">First Page</a></li>
-                <li><a href="Artificial-Intelligence.html">Machine Learning and Data Engineering</a></li>
-                <li><a href="Computational_Mechanics.html">Computational Mechanics</a></li>
-                <li><a href="Scientific_Machine_Learning.html">Scientific Machine Learning (SciML)</a></li>
-            </ul>
+
+    <main id="top">
+      <section class="hero ml-hero">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-content">
+          <p class="eyebrow">ML Research Engineer - Scientific ML - Geoscience AI</p>
+          <h1>I help teams turn complex physical data into reliable ML models.</h1>
+          <p class="hero-copy">
+            I work across the full ML workflow: data preparation, feature engineering, model development, uncertainty, QC,
+            evaluation, and technical communication for scientific and geospatial data.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#fit">Why hire me</a>
+            <a class="button" href="#projects">View projects</a>
+          </div>
         </div>
-        <div class="content">
-            <h2>About Me!</h2>
+
+        <aside class="portrait-card" aria-label="Profile photo area">
+          <div class="mountain-photo">
+            <img src="assets/profile.jpg" alt="Ehsan Motevali Haghighi" onerror="this.classList.add('missing')" />
+            <div class="photo-fallback">
+              <span>Profile photo</span>
+              <small>Add your photo as assets/profile.jpg</small>
+            </div>
+          </div>
+          <div class="portrait-caption">
+            <strong>Ehsan Motevali Haghighi</strong>
+            <span>ML Research Engineer for scientific and geospatial data</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="fit" class="section fit-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Professional profile</p>
+          <h2>Where I fit</h2>
+        </div>
+        <div class="fit-grid">
+          <article>
+            <h3>ML Research Engineer</h3>
+            <p>Design experiments, build models, evaluate results, and explain what the model learned.</p>
+          </article>
+          <article>
+            <h3>Scientific ML Engineer</h3>
+            <p>Connect physics-based simulation, data quality, and neural models for complex physical systems.</p>
+          </article>
+          <article>
+            <h3>Geoscience AI Specialist</h3>
+            <p>Build ML workflows for drilling, geochemistry, geophysics, rasters, and mineral prospectivity.</p>
+          </article>
+        </div>
+        <div class="value-strip">
+          <div>
+            <strong>I can own the messy middle of ML.</strong>
+            <span>Data, assumptions, features, validation, failure modes, and reporting.</span>
+          </div>
+          <div>
+            <strong>I bridge domain science and ML.</strong>
+            <span>My work connects physical meaning with model performance.</span>
+          </div>
+          <div>
+            <strong>I make results reviewable.</strong>
+            <span>Code, reports, dashboards, and handoffs that technical teams can inspect.</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="ml-background" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="section-heading compact">
+          <p class="eyebrow">ML skill map</p>
+          <h2>How I contribute to ML projects</h2>
+        </div>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <span>01</span>
+            <h3>Data preparation</h3>
+            <p>Prepare raw technical data so models can use it without hidden errors or inconsistent assumptions.</p>
+            <div class="example">
+              <strong>Example project</strong>
+              <p>MANFO pipeline: reviewed drillhole, assay, lithology, interval, and geophysical files so the data could be used safely in ML models.</p>
+              <p class="contribution"><b>My contribution:</b> I pushed the workflow toward traceable file provenance, interval identifiers, QA outputs, and clear README handoffs so later modeling did not depend on guessing what each file meant.</p>
+            </div>
+          </article>
+          <article class="skill-card">
+            <span>02</span>
+            <h3>Feature engineering</h3>
+            <p>Convert domain knowledge into model inputs that represent real processes, not only raw columns.</p>
+            <div class="example">
+              <strong>Example project</strong>
+              <p>Geology-informed features: built evidence layers from host lithology, faults, contacts, geochemistry, magnetic response, and scale context.</p>
+              <p class="contribution"><b>My contribution:</b> I treated feature design as a scientific step: each feature had to represent a geological process or spatial relationship, not just increase the number of columns.</p>
+            </div>
+          </article>
+          <article class="skill-card">
+            <span>03</span>
+            <h3>Model development</h3>
+            <p>Develop models from baseline ML to neural and transfer-learning workflows, then compare them honestly.</p>
+            <div class="example">
+              <strong>Example project</strong>
+              <p>Cross-belt transfer learning: trained models across gold belts and tested whether they could predict unseen target regions.</p>
+              <p class="contribution"><b>My contribution:</b> I designed leave-one-belt-out experiments to test transfer honestly, then compared local, global, donor-selected, and weighted approaches instead of trusting one model score.</p>
+            </div>
+          </article>
+          <article class="skill-card">
+            <span>04</span>
+            <h3>Uncertainty and QC</h3>
+            <p>Find weak points before they become false confidence: leakage, missing data, bias, and shortcuts.</p>
+            <div class="example">
+              <strong>Example project</strong>
+              <p>Geochemistry shortcut test: compared models with and without geochemistry to see if predictions came from geology or sampling artifacts.</p>
+              <p class="contribution"><b>My contribution:</b> I questioned whether high performance came from real geological signal or from spatial sampling bias, then designed tests to separate those two explanations.</p>
+            </div>
+          </article>
+          <article class="skill-card">
+            <span>05</span>
+            <h3>Evaluation</h3>
+            <p>Test whether performance survives realistic conditions instead of relying on easy random splits.</p>
+            <div class="example">
+              <strong>Example project</strong>
+              <p>Spatial validation: held out complete regions and belts to test whether model performance survives real geographic separation.</p>
+              <p class="contribution"><b>My contribution:</b> I used spatial and leave-one-site-out validation because random splits can overstate performance when nearby samples share the same geological context.</p>
+            </div>
+          </article>
+          <article class="skill-card">
+            <span>06</span>
+            <h3>Communication</h3>
+            <p>Translate technical experiments into decisions, reports, dashboards, and reviewable handoffs.</p>
+            <div class="example">
+              <strong>Example project</strong>
+              <p>Research handoffs: created HTML reports, README files, plots, and methodology notes so others could inspect the workflow.</p>
+              <p class="contribution"><b>My contribution:</b> I made the reasoning reviewable: what data were used, how the experiment was run, which metric was used, and what conclusion was supported.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contribution-section">
+        <div class="ml-background soft" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="section-heading compact">
+          <p class="eyebrow">How I think</p>
+          <h2>Examples of experiment design</h2>
+        </div>
+        <div class="experiment-grid">
+          <article>
+            <h3>Sampling design for ML evaluation</h3>
             <p>
-             As a PhD graduate from the Department of Civil Engineering at McMaster University, my research focuses on integrating Artificial Intelligence (AI) with numerical simulation techniques. This multidisciplinary approach has led me to explore various projects, expanding my knowledge and understanding of diverse methodologies.<br>
-            My expertise lies in three key areas:<br>
-                <br>
-            (1) Machine Learning and Data Engineering<br>
-            (2) Computational Mechanics<br>
-            (3) Scientific Machine Learning (SciML)<br>
-                <br>
-            This website serves as a platform to showcase my academic and industrial projects, demonstrating the practical applications and advancements in these interconnected fields.
+              In mineral prospectivity work, I did not treat sampling as a small preprocessing detail. I tested how positive and
+              negative samples were selected, how spatial blocks were held out, and how model scores changed when validation became
+              more realistic.
             </p>
+            <ul class="solid-list">
+              <li><b>Question:</b> Is the model learning geology or memorizing spatial location?</li>
+              <li><b>Experiment:</b> Compare random splits with spatial holdout and leave-one-belt-out validation.</li>
+              <li><b>Contribution:</b> Showed when simple scores were misleading and when predictions were more defensible.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Training data quality in PhD research</h3>
+            <p>
+              In my PhD, I studied why some neural constitutive models fail even when the architecture is powerful. I focused on
+              whether the training data actually contains the elastic and plastic information needed for path-dependent prediction.
+            </p>
+            <ul class="solid-list">
+              <li><b>Question:</b> What must a stress-strain dataset contain for ML to learn material behavior?</li>
+              <li><b>Experiment:</b> Generate controlled datasets with different elastic/plastic information and compare model behavior.</li>
+              <li><b>Contribution:</b> Shifted the focus from only model architecture to data quality and phase-space design.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Transfer learning across sites</h3>
+            <p>
+              For geoscience AI, I tested whether models trained on one geological region can help in another. The important part was
+              not only whether transfer worked, but identifying when it failed and why.
+            </p>
+            <ul class="solid-list">
+              <li><b>Question:</b> Which sites are useful donors for a new target area?</li>
+              <li><b>Experiment:</b> Train on different belts, test on unseen belts, then compare hard donor selection and soft weighting.</li>
+              <li><b>Contribution:</b> Demonstrated that more data is not always better; donor relevance and target similarity matter.</li>
+            </ul>
+          </article>
         </div>
+      </section>
+
+      <section id="projects" class="section dark-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Applied ML projects</p>
+          <h2>Recent work at 4Point AI</h2>
+        </div>
+        <div class="workflow concise">
+          <article>
+            <span class="step-number">A</span>
+            <h3>Mineral prospectivity</h3>
+            <p>Built models using geology, geophysics, geochemistry, drilling, DEM, raster, and structural features.</p>
+          </article>
+          <article>
+            <span class="step-number">B</span>
+            <h3>Transfer learning</h3>
+            <p>Tested how gold-belt models transfer across sites and when donor data improves or weakens predictions.</p>
+          </article>
+          <article>
+            <span class="step-number">C</span>
+            <h3>MANFO data workflow</h3>
+            <p>Designed QA, feature engineering, desurveying support, voxel review, and reproducible handoff workflows.</p>
+          </article>
+          <article>
+            <span class="step-number">D</span>
+            <h3>Model reliability</h3>
+            <p>Separated real geological signal from shortcuts using spatial validation, SHAP, map AUC, and uncertainty maps.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="research" class="section split-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">PhD research</p>
+          <h2>Scientific ML for mechanical simulation</h2>
+        </div>
+        <div class="split-grid concise">
+          <article class="plain-card">
+            <h3>Data</h3>
+            <p>Generated stress-strain and microstructure datasets from finite element simulations.</p>
+          </article>
+          <article class="plain-card">
+            <h3>Models</h3>
+            <p>Developed MLP, LSTM, data-driven homogenization, and hybrid AI-FEM workflows.</p>
+          </article>
+          <article class="plain-card">
+            <h3>Contribution</h3>
+            <p>Studied how input design, loading history, and dataset quality affect scientific ML reliability.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section systems-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Methods</p>
+          <h2>Tools I use</h2>
+        </div>
+        <div class="systems-grid concise">
+          <div class="system-column">
+            <h3>ML</h3>
+            <p>Python, scikit-learn, TensorFlow, Keras, PyTorch, SHAP, ROC/AUC, transfer learning.</p>
+          </div>
+          <div class="system-column">
+            <h3>Scientific data</h3>
+            <p>Geoscience tables, rasters, drillholes, geochemistry, geophysics, finite element simulation data.</p>
+          </div>
+          <div class="system-column">
+            <h3>Physics</h3>
+            <p>FEM, XFEM, FE2, fracture modeling, porous media, multiscale simulation, hybrid AI-FEM.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <h2>Portfolio theme</h2>
+        <p>Prepare the data carefully. Build the model honestly. Test whether it learned the science.</p>
+      </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Ehsan Motevali Haghighi. All rights reserved.</p>
+      <span>Ehsan Motevali Haghighi</span>
+      <span>Machine Learning - Scientific Data - Geoscience AI</span>
     </footer>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
