@@ -4,31 +4,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rule-based recommender system - Ehsan Motevali Haghighi</title>
-    <meta name="description" content="Jupyter notebook: a rule-based product recommender system built with association rules." />
-    <meta name="theme-color" content="#111a20" />
+    <meta name="description" content="Jupyter notebook: Rule-based recommender system." />
+    <meta name="theme-color" content="#091015" />
+    <meta property="og:title" content="Rule-based recommender system - Ehsan Motevali Haghighi" />
+    <meta property="og:description" content="Jupyter notebook: Rule-based recommender system." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://ehsan-moteval-haghighi.github.io/Soft_Computing/assets/profile.jpg" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="notebook-page">
+  <body class="notebook-page page-light">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
+    <header class="site-header" id="site-header">
       <a class="brand" href="index.html">
         <span class="brand-mark">EMH</span>
-        <span>Ehsan Motevali Haghighi</span>
+        <span class="brand-name">Ehsan Motevali Haghighi</span>
       </a>
       <nav>
-        <a href="index.html#scales">Scales</a>
-        <a href="index.html#research">Research</a>
-        <a href="index.html#transfer">Transfer learning</a>
-        <a href="index.html#publications">Publications</a>
-        <a href="index.html#notebooks">Notebooks</a>
-        <a href="index.html#contact" class="nav-cta">Contact</a>
+        <a href="Computational_Mechanics.html"><span class="long">Computational </span>Mechanics</a>
+        <a href="Machine_Learning.html" aria-current="page">Machine Learning</a>
+        <a href="index.html#about">About</a>
       </nav>
     </header>
+
     <main id="main">
       <div class="notebook-bar">
         <div>
-          <p class="breadcrumb"><a href="index.html">Home</a> / <a href="Artificial-Intelligence.html">ML and data engineering</a> / Notebook</p>
+          <p class="crumb"><a href="index.html">Home</a> / <a href="Machine_Learning.html#projects">Machine Learning</a> / Notebook</p>
           <h1>Rule-based recommender system</h1>
         </div>
         <a class="button" href="Rule_based.html" target="_blank" rel="noopener">Open full screen &#8599;</a>
@@ -37,8 +42,15 @@
     </main>
     <footer>
       <span>&copy; <span id="year">2026</span> Ehsan Motevali Haghighi</span>
-      <span><a href="mailto:ehsan.motevali.haghighi@gmail.com">Email</a> &middot; <a href="https://github.com/ehsan-moteval-haghighi" target="_blank" rel="noopener">GitHub</a></span>
+      <span><a href="mailto:ehsan.motevali.haghighi@gmail.com">Email</a> &middot; <a href="https://scholar.google.com/citations?user=JEr0hi8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> &middot; <a href="https://github.com/ehsan-moteval-haghighi" target="_blank" rel="noopener">GitHub</a></span>
     </footer>
-    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+    <script src="anim.js"></script>
+    <script>
+      (function () {
+        var h = document.getElementById("site-header");
+        function f() { h.classList.toggle("solid", window.scrollY > 40); }
+        f(); window.addEventListener("scroll", f, { passive: true });
+      })();
+    </script>
   </body>
 </html>

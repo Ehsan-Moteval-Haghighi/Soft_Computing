@@ -3,99 +3,248 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Computational mechanics - Ehsan Motevali Haghighi</title>
-    <meta name="description" content="Computational mechanics research by Ehsan Motevali Haghighi: porous media, constitutive modelling, multiscale simulation and fracture mechanics." />
-    <meta name="theme-color" content="#111a20" />
+    <title>Computational Mechanics - Ehsan Motevali Haghighi</title>
+    <meta name="description" content="Finite elements, porous media, fracture, multiscale simulation and constitutive modelling." />
+    <meta name="theme-color" content="#091015" />
+    <meta property="og:title" content="Computational Mechanics - Ehsan Motevali Haghighi" />
+    <meta property="og:description" content="Finite elements, porous media, fracture, multiscale simulation and constitutive modelling." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://ehsan-moteval-haghighi.github.io/Soft_Computing/assets/profile.jpg" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="page-dark">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
+    <header class="site-header" id="site-header">
       <a class="brand" href="index.html">
         <span class="brand-mark">EMH</span>
-        <span>Ehsan Motevali Haghighi</span>
+        <span class="brand-name">Ehsan Motevali Haghighi</span>
       </a>
       <nav>
-        <a href="index.html#scales">Scales</a>
-        <a href="index.html#research">Research</a>
-        <a href="index.html#transfer">Transfer learning</a>
-        <a href="index.html#publications">Publications</a>
-        <a href="index.html#notebooks">Notebooks</a>
-        <a href="index.html#contact" class="nav-cta">Contact</a>
+        <a href="Computational_Mechanics.html" aria-current="page"><span class="long">Computational </span>Mechanics</a>
+        <a href="Machine_Learning.html">Machine Learning</a>
+        <a href="index.html#about">About</a>
       </nav>
     </header>
+
     <main id="main">
       <section class="page-hero">
+        <canvas data-anim="mesh" aria-hidden="true"></canvas>
         <div class="page-hero-inner">
-        <p class="breadcrumb"><a href="index.html">Home</a> / Research areas</p>
-        <p class="eyebrow">Research area</p>
-        <h1>Computational mechanics</h1>
-        <p class="lead">Numerical modelling of materials and structures using finite element methods, from the behaviour of porous media to fracture and multiscale simulation.</p>
+          <p class="crumb"><a href="index.html">Home</a> / Computational Mechanics</p>
+          <p class="eyebrow">01 &middot; Path</p>
+          <h1>Computational Mechanics</h1>
+          <p class="lead">Solving the differential equations of solids, soils and fluids with finite elements, across scales.</p>
         </div>
       </section>
-      <section class="section split-section">
-        <div class="section-heading compact">
-          <p class="eyebrow">Topics</p>
-          <h2>What this area covers</h2>
+    <div class="tabs-wrap" data-tabs>
+      <div class="tablist" role="tablist" aria-label="Topics">
+        <div class="tablist-inner">
+          <button class="tab" role="tab" id="tab-finite-elements" aria-controls="finite-elements" aria-selected="true"><span class="n">01</span>Finite elements</button>
+          <button class="tab" role="tab" id="tab-porous-media" aria-controls="porous-media" aria-selected="false"><span class="n">02</span>Porous media</button>
+          <button class="tab" role="tab" id="tab-fracture" aria-controls="fracture" aria-selected="false"><span class="n">03</span>Fracture mechanics</button>
+          <button class="tab" role="tab" id="tab-multiscale" aria-controls="multiscale" aria-selected="false"><span class="n">04</span>Multiscale simulation</button>
+          <button class="tab" role="tab" id="tab-constitutive" aria-controls="constitutive" aria-selected="false"><span class="n">05</span>Constitutive modelling</button>
         </div>
-        <div class="topic-grid">
-          <article>
-            <h3>Porous media</h3>
-            <p>Coupled modelling of fluid flow and deformation in porous materials.</p>
+      </div>
+      <section class="panel" role="tabpanel" id="finite-elements" aria-labelledby="tab-finite-elements">
+        <div class="panel-head">
+          <div><h2>Finite element methods</h2></div>
+          <div><p>Nonlinear, coupled finite element solvers built and verified from the governing equations.</p><div class="equation"><span class="label">Weak form</span><div class="eq">$$\int_{\Omega} \boldsymbol{\sigma} : \nabla^{s}\delta\mathbf{u}\, d\Omega = \int_{\Gamma_t} \bar{\mathbf{t}}\cdot\delta\mathbf{u}\, d\Gamma$$</div></div></div>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <span class="tag">Method</span>
+            <h3>Coupled solvers</h3>
+            <p>Monolithic hydro-mechanical and thermo-hydro-mechanical formulations for soils and porous solids.</p>
+            
           </article>
-          <article>
-            <h3>Constitutive modelling</h3>
-            <p>Elastic and plastic material models for path-dependent behaviour, and the data needed to calibrate or learn them.</p>
+          <article class="card">
+            <span class="tag">Method</span>
+            <h3>Nonlinear solution</h3>
+            <p>Newton&ndash;Raphson with consistent tangents, adaptive time sub-stepping for stiff, history-dependent problems.</p>
+            
           </article>
-          <article>
-            <h3>Multiscale simulation</h3>
-            <p>FE&sup2; and homogenization approaches that link microstructure to macroscopic response.</p>
+          <article class="card">
+            <span class="tag gold">Practice</span>
+            <h3>Verification</h3>
+            <p>Every model checked against analytical solutions or fully resolved direct simulations before it is used.</p>
+            
           </article>
-          <article>
-            <h3>Fracture mechanics</h3>
-            <p>Crack initiation and propagation with XFEM and related fracture modelling techniques.</p>
-          </article>
+        </div>
+        <div class="related">
+          <h3>Related work</h3>
+          <ol class="pub-list">
+            <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:NMxIlDl6LWMC" target="_blank" rel="noopener">An algorithm for cohesive crack propagation in variably saturated porous media via a time sub-stepping scheme</a><span><i>Acta Geotechnica</i> 19(6), 2024</span></li>
+            <li><span class="title">Two-scale (FE&sup2;) consolidation of micro-heterogeneous soils: a verified transient-RVE model, a thermodynamically constrained recurrent surrogate, and few-shot transfer to new microstructures</span><span>Manuscript, 2026</span></li>
+            <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener">A model for moisture and heat flow in fractured unsaturated porous media</a><span><i>Int. J. for Numerical and Analytical Methods in Geomechanics</i>, 2017</span></li>
+          </ol>
         </div>
       </section>
-      <section class="section publications-section">
-        <div class="section-heading compact">
-          <p class="eyebrow">Related work</p>
-          <h2>Publications and manuscripts</h2>
+      <section class="panel" role="tabpanel" id="porous-media" aria-labelledby="tab-porous-media">
+        <div class="panel-head">
+          <div><h2>Porous media</h2></div>
+          <div><p>How fluid, heat and deformation interact in soils and rocks, saturated or not.</p><div class="equation"><span class="label">Biot equations</span><div class="eq">$$\nabla\!\cdot\!\left(\boldsymbol{\sigma}' - \alpha p\,\mathbf{I}\right) + \rho\mathbf{g} = \mathbf{0}$$</div><div class="eq">$$\alpha\,\dot{\varepsilon}_v + \tfrac{1}{M}\dot{p} - \nabla\!\cdot\!\left(\tfrac{\mathbf{k}}{\mu}\nabla p\right) = 0$$</div></div></div>
         </div>
-        <ol class="pub-list">
-          <li>
-            <a href="index.html#research" target="_blank" rel="noopener">Two-scale (FE&sup2;) consolidation of micro-heterogeneous soils with a thermodynamically constrained recurrent surrogate and few-shot transfer</a>
-            <span>Manuscript, 2026</span>
-          </li>
-          <li>
-            <a href="index.html#research" target="_blank" rel="noopener">Few-shot transfer of a thermodynamically consistent recurrent surrogate across microstructures</a>
-            <span>Manuscript, 2026</span>
-          </li>
-          <li>
-            <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:NMxIlDl6LWMC" target="_blank" rel="noopener">An algorithm for cohesive crack propagation in variably saturated porous media via a time sub-stepping scheme</a>
-            <span><i>Acta Geotechnica</i>, 2024</span>
-          </li>
-          <li>
-            <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:bEWYMUwI8FkC" target="_blank" rel="noopener">Investigation of climate change on unsaturated porous media via a discrete thermo-hydro-mechanical model</a>
-            <span><i>Applied Sciences</i>, 2021</span>
-          </li>
-          <li>
-            <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener">A model for moisture and heat flow in fractured unsaturated porous media</a>
-            <span><i>Int. J. for Numerical and Analytical Methods in Geomechanics</i>, 2017</span>
-          </li>
-          <li>
-            <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:blknAaTinKkC" target="_blank" rel="noopener">Propagation of cohesive crack in unsaturated porous media by use of XFEM method</a>
-            <span><i>E3S Web of Conferences</i>, 2016</span>
-          </li>
-        </ol>
-        <p class="pub-more"><a class="button dark" href="index.html#publications">All publications and PhD thesis &rarr;</a></p>
+        <div class="card-grid">
+          <article class="card">
+            <span class="tag">Poromechanics</span>
+            <h3>Consolidation</h3>
+            <p>Biot consolidation of layered and double-porosity soils, where clay lenses drain on their own time scale.</p>
+            
+          </article>
+          <article class="card">
+            <span class="tag">Thermo-hydro-mechanics</span>
+            <h3>Unsaturated flow</h3>
+            <p>Moisture and heat flow in unsaturated and fractured media, including climate-driven loading.</p>
+            
+          </article>
+          <article class="card">
+            <span class="tag gold">Data-driven</span>
+            <h3>Soil&ndash;water retention</h3>
+            <p>Retention behaviour of unsaturated soils learned from data with deep networks.</p>
+            
+          </article>
+        </div>
+        <div class="related">
+          <h3>Related work</h3>
+          <ol class="pub-list">
+            <li><span class="title">Two-scale (FE&sup2;) consolidation of micro-heterogeneous soils: a verified transient-RVE model, a thermodynamically constrained recurrent surrogate, and few-shot transfer to new microstructures</span><span>Manuscript, 2026</span></li>
+            <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:bEWYMUwI8FkC" target="_blank" rel="noopener">Investigation of climate change on unsaturated porous media via a discrete thermo-hydro-mechanical model</a><span><i>Applied Sciences</i> 11(16), 2021</span></li>
+            <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener">A model for moisture and heat flow in fractured unsaturated porous media</a><span><i>Int. J. for Numerical and Analytical Methods in Geomechanics</i>, 2017</span></li>
+            <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:BqipwSGYUEgC" target="_blank" rel="noopener">Phenomenological evaluation of soil-water retention behavior via deep learning</a><span>74th Canadian Geotechnical Conference, 2021</span></li>
+          </ol>
+        </div>
       </section>
+      <section class="panel" role="tabpanel" id="fracture" aria-labelledby="tab-fracture">
+        <div class="panel-head">
+          <div><h2>Fracture mechanics</h2></div>
+          <div><p>Cracks that open and grow inside partially saturated porous media.</p><div class="equation"><span class="label">XFEM enrichment</span><div class="eq">$$\mathbf{u}^h(\mathbf{x}) = \sum_{i} N_i(\mathbf{x})\,\mathbf{u}_i + \sum_{j} N_j(\mathbf{x})\,H(\mathbf{x})\,\mathbf{a}_j$$</div></div></div>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <span class="tag">Fracture</span>
+            <h3>Cohesive cracks</h3>
+            <p>Cohesive-zone models for crack initiation and propagation coupled with fluid flow in the crack.</p>
+            
+          </article>
+          <article class="card">
+            <span class="tag">Method</span>
+            <h3>XFEM</h3>
+            <p>Extended finite elements that let the crack cut through the mesh without remeshing.</p>
+            
+          </article>
+          <article class="card">
+            <span class="tag gold">Algorithm</span>
+            <h3>Time sub-stepping</h3>
+            <p>A sub-stepping algorithm that keeps crack propagation stable in variably saturated media.</p>
+            
+          </article>
+        </div>
+        <div class="related">
+          <h3>Related work</h3>
+          <ol class="pub-list">
+            <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:NMxIlDl6LWMC" target="_blank" rel="noopener">An algorithm for cohesive crack propagation in variably saturated porous media via a time sub-stepping scheme</a><span><i>Acta Geotechnica</i> 19(6), 2024</span></li>
+            <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:blknAaTinKkC" target="_blank" rel="noopener">Propagation of cohesive crack in unsaturated porous media by use of XFEM method</a><span><i>E3S Web of Conferences</i> 9, 2016</span></li>
+            <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener">A model for moisture and heat flow in fractured unsaturated porous media</a><span><i>Int. J. for Numerical and Analytical Methods in Geomechanics</i>, 2017</span></li>
+          </ol>
+        </div>
+      </section>
+      <section class="panel" role="tabpanel" id="multiscale" aria-labelledby="tab-multiscale">
+        <div class="panel-head">
+          <div><h2>Multiscale simulation</h2></div>
+          <div><p>Linking the microstructure to the structure, and making it fast enough to use.</p><div class="equation"><span class="label">Hill&ndash;Mandel condition</span><div class="eq">$$\langle \boldsymbol{\sigma} : \delta\boldsymbol{\varepsilon} \rangle_{\Omega_{\mathrm{RVE}}} = \boldsymbol{\Sigma} : \delta\mathbf{E}$$</div></div></div>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <span class="tag">Method</span>
+            <h3>FE&sup2; homogenisation</h3>
+            <p>A microstructure problem (RVE) solved at every integration point of the structure, including transient RVEs for consolidation.</p>
+            
+          </article>
+          <article class="card">
+            <span class="tag gold">Physics + ML</span>
+            <h3>Neural surrogates</h3>
+            <p>Recurrent networks that replace the RVE inside the macroscale solver, with consistent tangents for Newton convergence.</p>
+            
+          </article>
+          <article class="card">
+            <span class="tag gold">Physics + ML</span>
+            <h3>Few-shot transfer</h3>
+            <p>A trained surrogate adapted to a new microstructure from a handful of simulations instead of a new dataset.</p>
+            
+          </article>
+        </div>
+        <div class="related">
+          <h3>Related work</h3>
+          <ol class="pub-list">
+            <li><span class="title">Two-scale (FE&sup2;) consolidation of micro-heterogeneous soils: a verified transient-RVE model, a thermodynamically constrained recurrent surrogate, and few-shot transfer to new microstructures</span><span>Manuscript, 2026</span></li>
+            <li><span class="title">Few-shot transfer of a thermodynamically consistent recurrent surrogate across microstructures, from the material point to reversed macroscale loading</span><span>Manuscript, 2026</span></li>
+            <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:isC4tDSrTZIC" target="_blank" rel="noopener">A multifeatured data-driven homogenization for heterogeneous elastic solids</a><span><i>Applied Sciences</i> 11(19), 2021</span></li>
+          </ol>
+        </div>
+      </section>
+      <section class="panel" role="tabpanel" id="constitutive" aria-labelledby="tab-constitutive">
+        <div class="panel-head">
+          <div><h2>Constitutive modelling</h2></div>
+          <div><p>The stress&ndash;strain laws that close the equations, classical or learned from data.</p><div class="equation"><span class="label">Dissipation inequality</span><div class="eq">$$\mathcal{D} = \boldsymbol{\sigma} : \dot{\boldsymbol{\varepsilon}} - \dot{\psi} \;\ge\; 0$$</div></div></div>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <span class="tag">Learned models</span>
+            <h3>Path-dependent plasticity</h3>
+            <p>LSTM and GRU models that learn history-dependent plastic behaviour of heterogeneous, anisotropic materials.</p>
+            
+          </article>
+          <article class="card">
+            <span class="tag gold">Physics + ML</span>
+            <h3>Thermodynamic consistency</h3>
+            <p>A learned free energy and a dissipation operator that keep the second law satisfied by construction.</p>
+            
+          </article>
+          <article class="card">
+            <span class="tag">PhD research</span>
+            <h3>Training data design</h3>
+            <p>What a stress&ndash;strain dataset must contain for a network to learn material behaviour: the focus of my PhD.</p>
+            
+          </article>
+        </div>
+        <div class="related">
+          <h3>Related work</h3>
+          <ol class="pub-list">
+            <li><a href="https://macsphere.mcmaster.ca/items/38695e9d-89a5-46af-b3f7-ad888622fa15" target="_blank" rel="noopener">Application of deep learning in geotechnical engineering with a focus on constitutive models</a><span>PhD thesis, McMaster University, 2024</span></li>
+            <li><span class="title">Few-shot transfer of a thermodynamically consistent recurrent surrogate across microstructures, from the material point to reversed macroscale loading</span><span>Manuscript, 2026</span></li>
+            <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:hMod-77fHWUC" target="_blank" rel="noopener">Revisiting preparation of phase space for learning path-dependent behavior via deep neural networks</a><span><i>Journal of Engineering Mechanics</i> 148(12), 2022</span></li>
+            <li><a href="https://arxiv.org/abs/2204.01466" target="_blank" rel="noopener">A single long short-term memory network for enhancing the prediction of path-dependent plasticity with material heterogeneity and anisotropy</a><span>arXiv:2204.01466, 2022</span></li>
+          </ol>
+        </div>
+      </section>
+    </div>
+
+      <a class="next-page" href="Machine_Learning.html">
+        <div class="next-page-inner">
+          <div><span>Next path</span><strong>Machine Learning</strong></div>
+          <i>&rarr;</i>
+        </div>
+      </a>
     </main>
     <footer>
       <span>&copy; <span id="year">2026</span> Ehsan Motevali Haghighi</span>
-      <span><a href="mailto:ehsan.motevali.haghighi@gmail.com">Email</a> &middot; <a href="https://github.com/ehsan-moteval-haghighi" target="_blank" rel="noopener">GitHub</a></span>
+      <span><a href="mailto:ehsan.motevali.haghighi@gmail.com">Email</a> &middot; <a href="https://scholar.google.com/citations?user=JEr0hi8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> &middot; <a href="https://github.com/ehsan-moteval-haghighi" target="_blank" rel="noopener">GitHub</a></span>
     </footer>
-    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js" onload="renderMathInElement(document.body, { delimiters: [{ left: '$$', right: '$$', display: true }], throwOnError: false })"></script>
+    <script src="anim.js"></script>
+    <script>
+      (function () {
+        var h = document.getElementById("site-header");
+        function f() { h.classList.toggle("solid", window.scrollY > 40); }
+        f(); window.addEventListener("scroll", f, { passive: true });
+      })();
+    </script>
   </body>
 </html>

@@ -5,40 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Page not found - Ehsan Motevali Haghighi</title>
     <meta name="description" content="Page not found." />
-    <meta name="theme-color" content="#111a20" />
+    <meta name="theme-color" content="#091015" />
+    <meta property="og:title" content="Page not found - Ehsan Motevali Haghighi" />
+    <meta property="og:description" content="Page not found." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://ehsan-moteval-haghighi.github.io/Soft_Computing/assets/profile.jpg" />
     <link rel="icon" href="/Soft_Computing/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/Soft_Computing/styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
+    <header class="site-header" id="site-header">
       <a class="brand" href="/Soft_Computing/index.html">
         <span class="brand-mark">EMH</span>
-        <span>Ehsan Motevali Haghighi</span>
+        <span class="brand-name">Ehsan Motevali Haghighi</span>
       </a>
       <nav>
-        <a href="/Soft_Computing/index.html#scales">Scales</a>
-        <a href="/Soft_Computing/index.html#research">Research</a>
-        <a href="/Soft_Computing/index.html#transfer">Transfer learning</a>
-        <a href="/Soft_Computing/index.html#publications">Publications</a>
-        <a href="/Soft_Computing/index.html#notebooks">Notebooks</a>
-        <a href="/Soft_Computing/index.html#contact" class="nav-cta">Contact</a>
+        <a href="/Soft_Computing/Computational_Mechanics.html"><span class="long">Computational </span>Mechanics</a>
+        <a href="/Soft_Computing/Machine_Learning.html">Machine Learning</a>
+        <a href="/Soft_Computing/index.html#about">About</a>
       </nav>
     </header>
+
     <main id="main">
-      <section class="page-hero">
-        <div class="page-hero-inner">
-        <p class="eyebrow">404</p>
-        <h1>This page doesn't exist.</h1>
-        <p class="lead">It may have moved during a site update.</p>
-        <p style="margin-top:24px"><a class="button primary" href="/Soft_Computing/">Back to the homepage</a></p>
+      <section class="hero">
+        <canvas data-anim="flow" aria-hidden="true"></canvas>
+        <div class="hero-inner">
+          <p class="hero-kicker">404</p>
+          <h1>Page not found</h1>
+          <p class="hero-line">It may have moved during a site update.</p>
+          <p style="margin-top:28px"><a class="button primary" href="/Soft_Computing/">Back to the homepage</a></p>
         </div>
       </section>
     </main>
     <footer>
       <span>&copy; <span id="year">2026</span> Ehsan Motevali Haghighi</span>
-      <span><a href="mailto:ehsan.motevali.haghighi@gmail.com">Email</a> &middot; <a href="https://github.com/ehsan-moteval-haghighi" target="_blank" rel="noopener">GitHub</a></span>
+      <span><a href="mailto:ehsan.motevali.haghighi@gmail.com">Email</a> &middot; <a href="https://scholar.google.com/citations?user=JEr0hi8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> &middot; <a href="https://github.com/ehsan-moteval-haghighi" target="_blank" rel="noopener">GitHub</a></span>
     </footer>
-    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+    <script src="/Soft_Computing/anim.js"></script>
+    <script>
+      (function () {
+        var h = document.getElementById("site-header");
+        function f() { h.classList.toggle("solid", window.scrollY > 40); }
+        f(); window.addEventListener("scroll", f, { passive: true });
+      })();
+    </script>
   </body>
 </html>
