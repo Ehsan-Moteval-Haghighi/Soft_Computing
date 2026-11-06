@@ -3,18 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ehsan Motevali Haghighi - Machine Learning Portfolio</title>
+    <title>Ehsan Motevali Haghighi - Physics and Machine Learning Modelling</title>
     <meta
       name="description"
-      content="Machine learning portfolio for Ehsan Motevali Haghighi, focused on data preparation, model development, uncertainty, QC, evaluation, and scientific ML."
+      content="Ehsan Motevali Haghighi, PhD: computational mechanics and scientific machine learning. Finite element and multiscale (FE2) modelling, thermodynamically consistent neural surrogates, transfer learning and geoscience AI."
     />
     <meta name="theme-color" content="#111a20" />
-    <meta property="og:title" content="Ehsan Motevali Haghighi - Machine Learning Portfolio" />
-    <meta property="og:description" content="ML Research Engineer for scientific and geospatial data: data preparation, model development, uncertainty, QC and evaluation." />
+    <meta property="og:title" content="Ehsan Motevali Haghighi - Physics and Machine Learning Modelling" />
+    <meta
+      property="og:description"
+      content="I model physical systems with differential equations, machine learning, or both: from the microstructure to the mineral deposit."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ehsan-moteval-haghighi.github.io/Soft_Computing/" />
     <meta property="og:image" content="https://ehsan-moteval-haghighi.github.io/Soft_Computing/assets/profile.jpg" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -22,12 +26,13 @@
     <header class="site-header">
       <a class="brand" href="#top">
         <span class="brand-mark">EMH</span>
-        <span>Machine Learning Portfolio</span>
+        <span>Ehsan Motevali Haghighi</span>
       </a>
       <nav>
-        <a href="#skills">ML Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="#scales">Scales</a>
         <a href="#research">Research</a>
+        <a href="#transfer">Transfer learning</a>
+        <a href="#publications">Publications</a>
         <a href="#notebooks">Notebooks</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </nav>
@@ -37,62 +42,248 @@
       <section class="hero ml-hero">
         <canvas id="hero-canvas" aria-hidden="true"></canvas>
         <div class="hero-content">
-          <p class="eyebrow">ML Research Engineer - Scientific ML - Geoscience AI</p>
-          <h1>I help teams turn complex physical data into reliable ML models.</h1>
+          <p class="eyebrow">PhD, Computational Mechanics &middot; Scientific ML &middot; Geoscience AI</p>
+          <h1>I model physical systems with differential equations, machine learning, or both.</h1>
           <p class="hero-copy">
-            I work across the full ML workflow: data preparation, feature engineering, model development, uncertainty, QC,
-            evaluation, and technical communication for scientific and geospatial data.
+            I build finite element and multiscale (FE&sup2;) models, neural surrogates that obey thermodynamics by
+            construction, and transfer-learning workflows that carry a model to a new microstructure or a new mineral
+            deposit. Then I test them the way a sceptical reviewer would.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#fit">Why hire me</a>
-            <a class="button" href="#projects">View projects</a>
+            <a class="button primary" href="#research">See the research</a>
+            <a class="button" href="#publications">Publications</a>
             <a class="button" href="#contact">Get in touch</a>
           </div>
         </div>
 
-        <aside class="portrait-card" aria-label="Profile photo area">
+        <aside class="portrait-card" aria-label="Profile">
           <div class="mountain-photo">
             <img src="assets/profile.jpg" alt="Ehsan Motevali Haghighi" width="420" height="420" onerror="this.classList.add('missing')" />
           </div>
           <div class="portrait-caption">
-            <strong>Ehsan Motevali Haghighi</strong>
-            <span>ML Research Engineer for scientific and geospatial data</span>
+            <strong>Ehsan Motevali Haghighi, PhD</strong>
+            <span>Physics-based and machine-learning modelling across scales &middot; Toronto, Canada</span>
           </div>
         </aside>
       </section>
 
-      <section id="fit" class="section fit-section">
+      <section class="stats-band" aria-label="Highlights">
+        <div class="stats-grid">
+          <div><strong>PhD</strong><span>McMaster University, 2024: deep learning for constitutive models</span></div>
+          <div><strong>8</strong><span>publications in mechanics and geomechanics, cited 42 times (Google Scholar)</span></div>
+          <div><strong>~130&times;</strong><span>fewer CPU core-hours than full FE&sup2; with a transferred neural surrogate</span></div>
+          <div><strong>5 shots</strong><span>enough to adapt a surrogate to a new microstructure, with zero thermodynamic violations</span></div>
+          <div><strong>34</strong><span>mineral deposits in drill and satellite transfer-learning studies</span></div>
+        </div>
+      </section>
+
+      <section id="scales" class="section scales-section">
         <div class="section-heading compact">
-          <p class="eyebrow">Professional profile</p>
-          <h2>Where I fit</h2>
+          <p class="eyebrow">Modelling across scales</p>
+          <h2>From the microstructure to the continent</h2>
+          <p class="section-lead">
+            The same questions come up at every scale: which equations govern the system, what data constrain it, and
+            when a learned model can replace or complement the physics.
+          </p>
         </div>
-        <div class="fit-grid">
-          <article>
-            <h3>ML Research Engineer</h3>
-            <p>Design experiments, build models, evaluate results, and explain what the model learned.</p>
+        <ol class="scale-ladder">
+          <li>
+            <span class="scale-size">&micro;m &ndash; mm</span>
+            <div>
+              <h3>Microstructure (RVE)</h3>
+              <p>Transient representative volume elements of porous and particle-reinforced solids and double-porosity soils, solved by FEM as a virtual laboratory.</p>
+            </div>
+          </li>
+          <li>
+            <span class="scale-size">material point</span>
+            <div>
+              <h3>Constitutive behaviour</h3>
+              <p>Path-dependent plasticity, elasticity and soil-water retention learned by LSTM, GRU and thermodynamically constrained recurrent networks.</p>
+            </div>
+          </li>
+          <li>
+            <span class="scale-size">m &ndash; 100 m</span>
+            <div>
+              <h3>Structures and soil layers</h3>
+              <p>FE&sup2; consolidation, Mandel's problem, strip footings, plates and notched panels under reversed loading; cohesive cracks in unsaturated porous media (XFEM).</p>
+            </div>
+          </li>
+          <li>
+            <span class="scale-size">km</span>
+            <div>
+              <h3>Mineral deposits</h3>
+              <p>3D prediction of lithology, alteration, minerals and grade from drill holes, with geology-informed spatial features and few-hole transfer to new deposits.</p>
+            </div>
+          </li>
+          <li>
+            <span class="scale-size">region &ndash; continent</span>
+            <div>
+              <h3>Landscapes and river networks</h3>
+              <p>Satellite and geophysical rasters, stream chemistry along river networks, and censored measurements for critical-mineral source mapping.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="methods" class="section methods-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">The mathematics</p>
+          <h2>Equations I work with</h2>
+          <p class="section-lead">Physics-based models, numerical methods and statistical learning, used together.</p>
+        </div>
+        <div class="equation-grid">
+          <article class="equation-card">
+            <h3>Coupled poromechanics (Biot)</h3>
+            <div class="eq">$$\nabla\!\cdot\!\left(\boldsymbol{\sigma}' - \alpha\,p\,\mathbf{I}\right) + \rho\,\mathbf{g} = \mathbf{0}$$</div>
+            <div class="eq">$$\alpha\,\dot{\varepsilon}_v + \tfrac{1}{M}\,\dot{p} - \nabla\!\cdot\!\left(\tfrac{\mathbf{k}}{\mu}\nabla p\right) = 0$$</div>
+            <p>Consolidation, unsaturated thermo-hydro-mechanical flow, and double porosity with two drainage time scales.</p>
           </article>
-          <article>
-            <h3>Scientific ML Engineer</h3>
-            <p>Connect physics-based simulation, data quality, and neural models for complex physical systems.</p>
+          <article class="equation-card">
+            <h3>Computational homogenisation (FE&sup2;)</h3>
+            <div class="eq">$$\langle \boldsymbol{\sigma} : \delta\boldsymbol{\varepsilon} \rangle_{\Omega_{\mathrm{RVE}}} = \boldsymbol{\Sigma} : \delta\mathbf{E}$$</div>
+            <p>A microscale boundary-value problem at every Gauss point, with consistent tangents for the macroscale Newton solver.</p>
           </article>
-          <article>
-            <h3>Geoscience AI Specialist</h3>
-            <p>Build ML workflows for drilling, geochemistry, geophysics, rasters, and mineral prospectivity.</p>
+          <article class="equation-card">
+            <h3>Thermodynamic consistency</h3>
+            <div class="eq">$$\mathcal{D} = \boldsymbol{\sigma} : \dot{\boldsymbol{\varepsilon}} - \dot{\psi} \;\ge\; 0$$</div>
+            <p>Neural surrogates with a learned convex free energy and a positive semi-definite dissipation operator, so the second law holds for every weight and every load history.</p>
+          </article>
+          <article class="equation-card">
+            <h3>Learning and uncertainty</h3>
+            <div class="eq">$$\theta^{*}_{\text{new}} = \arg\min_{\theta_{\text{phys}}} \sum_{k=1}^{K} \mathcal{L}\big(f_{\theta}(\boldsymbol{\varepsilon}_{k}),\, \boldsymbol{\sigma}_{k}\big)$$</div>
+            <p>Few-shot transfer that refits only the physics part of a model, plus kriging, censored (Tobit, Kaplan&ndash;Meier) and conformal methods for honest uncertainty.</p>
           </article>
         </div>
-        <div class="value-strip">
-          <div>
-            <strong>I can own the messy middle of ML.</strong>
-            <span>Data, assumptions, features, validation, failure modes, and reporting.</span>
-          </div>
-          <div>
-            <strong>I bridge domain science and ML.</strong>
-            <span>My work connects physical meaning with model performance.</span>
-          </div>
-          <div>
-            <strong>I make results reviewable.</strong>
-            <span>Code, reports, dashboards, and handoffs that technical teams can inspect.</span>
-          </div>
+        <ul class="method-tags" aria-label="Numerical and statistical methods">
+          <li>FEM</li><li>XFEM</li><li>FE&sup2;</li><li>Newton&ndash;Raphson &amp; consistent tangents</li><li>Time sub-stepping</li>
+          <li>Reduced-order models</li><li>LSTM / GRU</li><li>Transformers</li><li>Neural processes</li><li>Gradient boosting</li>
+          <li>Kriging</li><li>Gaussian processes</li><li>Conformal prediction</li><li>Survival / censored models</li><li>Spatial cross-validation</li>
+        </ul>
+      </section>
+
+      <section id="research" class="section dark-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Featured research, 2026</p>
+          <h2>Physics-constrained neural surrogates for multiscale mechanics</h2>
+          <p class="section-lead light">
+            Two manuscripts that connect differential equations, homogenisation and machine learning, built and verified end to end.
+          </p>
+        </div>
+        <div class="paper-grid">
+          <article class="paper-card">
+            <span class="tag">Manuscript &middot; 2026</span>
+            <h3>Two-scale (FE&sup2;) consolidation of micro-heterogeneous soils: a verified transient-RVE model, a thermodynamically constrained recurrent surrogate, and few-shot transfer to new microstructures</h3>
+            <p>
+              Builds and verifies a transient RVE model of Biot consolidation for double-porosity soils (sand with clay
+              lenses), then trains a thermodynamically constrained GRU (TC-GRU) on it. The work supplied to the network is
+              proven never to be negative, for every load history and every time-step sequence.
+            </p>
+            <ul class="result-list">
+              <li><b>0.27 %</b> settlement error against direct simulation, vs 10.73 % for classical steady homogenisation</li>
+              <li><b>0.05&ndash;0.07 %</b> median stress error on 570 held-out histories in 17 test sets</li>
+              <li>Transferred to <b>8 new microstructures</b> by refitting 1,296 of 238,869 parameters</li>
+              <li>Replaces the RVE in 27 coupled macroscale analyses, <b>5&ndash;21&times; faster</b> than full FE&sup2;</li>
+            </ul>
+          </article>
+          <article class="paper-card">
+            <span class="tag">Manuscript &middot; 2026</span>
+            <h3>Few-shot transfer of a thermodynamically consistent recurrent surrogate across microstructures, from the material point to reversed macroscale loading</h3>
+            <p>
+              A GRU trained on RVE stresses and consistent tangents, with an incremental energy head and an energy-split
+              physics layer that makes the discrete dissipation non-negative by construction, adapted to 14 new porous and
+              particle-reinforced cells.
+            </p>
+            <ul class="result-list">
+              <li>5-shot stress error <b>1.8&ndash;5.3 MPa</b> vs 4.6&ndash;55.5 MPa zero-shot</li>
+              <li><b>0 of 168</b> transferred models violate the dissipation inequality</li>
+              <li><b>~130&times;</b> fewer CPU core-hours than FE&sup2; on a plate with a hole, reversed bending and a notched panel</li>
+              <li>A new microstructure costs 0.11 core-hours of data and 4 GPU minutes of fine-tuning</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="transfer" class="section transfer-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Transfer learning</p>
+          <h2>Carrying a model to where it has not seen data</h2>
+          <p class="section-lead">
+            Most of my work asks the same question in different domains: how little new data does a trained model need
+            to work somewhere new, and how do you prove it?
+          </p>
+        </div>
+        <div class="transfer-grid">
+          <article>
+            <h3>New microstructures</h3>
+            <p>Physics-constrained surrogates adapted with 5&ndash;60 simulated histories of a new cell, keeping the second law intact.</p>
+          </article>
+          <article>
+            <h3>New mineral deposits</h3>
+            <p>A library model trained on other deposits, adapted with only 10 or 30 logged drill holes at the target, and tested against inverse-distance weighting and kriging.</p>
+          </article>
+          <article>
+            <h3>Choosing donors</h3>
+            <p>Leave-one-belt-out and analogue-deposit ranking to decide which source sites help a new target and which hurt it.</p>
+          </article>
+          <article>
+            <h3>New regions</h3>
+            <p>Models held out by whole state, river basin or mining district, with conformal coverage restored by a small local recalibration sample.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="geoscience" class="section geo-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Geoscience AI at 4Point AI</p>
+          <h2>Applied modelling of the subsurface</h2>
+        </div>
+        <div class="geo-grid">
+          <article class="geo-card">
+            <h3>Distance&ndash;Direction features for mineralisation</h3>
+            <p>
+              A geology-informed spatial representation: for each location, how far and in which direction the nearest
+              logged rock type, alteration, mineral and grade class lie, learned by a neural network. On hidden drill
+              holes it puts <b>3.9&times;</b> more high-grade silver in the top 10 % than random, against 1.6&times; for
+              ordinary kriging.
+            </p>
+            <span class="meta">Submitted to <i>Engineering Applications of Artificial Intelligence</i></span>
+          </article>
+          <article class="geo-card">
+            <h3>Drill data + satellite rasters, 34 deposits</h3>
+            <p>
+              Predicting 24 geological concepts and gold in hidden ground (undrilled, between holes, below the drilling)
+              from drill context, 541 raster features, foundation-model embeddings, TabPFN and context-set networks.
+              Fused models match the better source without knowing which one it is.
+            </p>
+            <span class="meta">Five hiding schemes &middot; three service levels &middot; deposit-grouped validation</span>
+          </article>
+          <article class="geo-card">
+            <h3>Critical minerals from stream chemistry</h3>
+            <p>
+              Cu, Co and Mn source mapping from 78,290 public stream results, with non-detects modelled directly
+              (Kaplan&ndash;Meier, Tobit, accelerated-failure-time, censored transformer) and a recurrent state carried
+              down the river network. Geology ranks unseen districts at AUC 0.85 (Cu) and 0.95 (Mn).
+            </p>
+            <span class="meta">Basin, state and district hold-outs &middot; calibration &middot; conformal sets</span>
+          </article>
+          <article class="geo-card">
+            <h3>Uncertainty quantification in four levels</h3>
+            <p>
+              Geological realisations, sampling design, grade-dependent error and model-form uncertainty
+              (Bayesian ridge, Gaussian processes, NGBoost), propagated from stochastic geometry to voxel-grade models.
+            </p>
+            <span class="meta">500 realisations &middot; location-aware bootstrap</span>
+          </article>
+          <article class="geo-card wide">
+            <h3>A tested portfolio of ML products</h3>
+            <p>
+              Contributed to 4Point AI's technical paper series: 121 narrow products for mining, exploration and
+              environmental services, each held out by hole, deposit, site or later period and compared with the
+              strongest domain baseline. Forty reached a Good or Strong rating, from assay QA and drill-hole selection to
+              learned geophysical inversion and metallurgical recovery. The clearest lesson: gains came from better data
+              and better-posed targets more than from more complex models.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -101,8 +292,8 @@
           <span></span><span></span><span></span><span></span><span></span>
         </div>
         <div class="section-heading compact">
-          <p class="eyebrow">ML skill map</p>
-          <h2>How I contribute to ML projects</h2>
+          <p class="eyebrow">How I work</p>
+          <h2>How I contribute to modelling projects</h2>
         </div>
         <div class="skill-grid">
           <article class="skill-card">
@@ -110,180 +301,132 @@
             <h3>Data preparation</h3>
             <p>Prepare raw technical data so models can use it without hidden errors or inconsistent assumptions.</p>
             <div class="example">
-              <strong>Example project</strong>
-              <p>MANFO pipeline: reviewed drillhole, assay, lithology, interval, and geophysical files so the data could be used safely in ML models.</p>
-              <p class="contribution"><b>My contribution:</b> I pushed the workflow toward traceable file provenance, interval identifiers, QA outputs, and clear README handoffs so later modeling did not depend on guessing what each file meant.</p>
+              <strong>Example</strong>
+              <p>Drill-hole, assay, lithology and geophysical files reviewed with traceable provenance, interval identifiers and QA outputs, so later modelling did not depend on guessing what each file meant.</p>
             </div>
           </article>
           <article class="skill-card">
             <span>02</span>
-            <h3>Feature engineering</h3>
-            <p>Convert domain knowledge into model inputs that represent real processes, not only raw columns.</p>
+            <h3>Physics in the features</h3>
+            <p>Convert domain knowledge into model inputs and architectures that represent real processes.</p>
             <div class="example">
-              <strong>Example project</strong>
-              <p>Geology-informed features: built evidence layers from host lithology, faults, contacts, geochemistry, magnetic response, and scale context.</p>
-              <p class="contribution"><b>My contribution:</b> I treated feature design as a scientific step: each feature had to represent a geological process or spatial relationship, not just increase the number of columns.</p>
+              <strong>Example</strong>
+              <p>Distance&ndash;direction geology features for ore grade, and a free-energy plus dissipation structure for material surrogates instead of a plain black box.</p>
             </div>
           </article>
           <article class="skill-card">
             <span>03</span>
             <h3>Model development</h3>
-            <p>Develop models from baseline ML to neural and transfer-learning workflows, then compare them honestly.</p>
+            <p>From FEM and FE&sup2; solvers to baseline ML, recurrent networks, transformers and transfer learning, compared honestly.</p>
             <div class="example">
-              <strong>Example project</strong>
-              <p>Cross-belt transfer learning: trained models across gold belts and tested whether they could predict unseen target regions.</p>
-              <p class="contribution"><b>My contribution:</b> I designed leave-one-belt-out experiments to test transfer honestly, then compared local, global, donor-selected, and weighted approaches instead of trusting one model score.</p>
+              <strong>Example</strong>
+              <p>Local, global, donor-selected and weighted transfer approaches compared across gold belts instead of trusting one model score.</p>
             </div>
           </article>
           <article class="skill-card">
             <span>04</span>
             <h3>Uncertainty and QC</h3>
-            <p>Find weak points before they become false confidence: leakage, missing data, bias, and shortcuts.</p>
+            <p>Find weak points before they become false confidence: leakage, missing data, bias and shortcuts.</p>
             <div class="example">
-              <strong>Example project</strong>
-              <p>Geochemistry shortcut test: compared models with and without geochemistry to see if predictions came from geology or sampling artifacts.</p>
-              <p class="contribution"><b>My contribution:</b> I questioned whether high performance came from real geological signal or from spatial sampling bias, then designed tests to separate those two explanations.</p>
+              <strong>Example</strong>
+              <p>Tested whether predictions came from geology or from where samples happened to be taken, with matched case&ndash;control sets and position-only baselines.</p>
             </div>
           </article>
           <article class="skill-card">
             <span>05</span>
-            <h3>Evaluation</h3>
-            <p>Test whether performance survives realistic conditions instead of relying on easy random splits.</p>
+            <h3>Verification and evaluation</h3>
+            <p>Verify numerical models against direct simulation and test learned models under realistic hold-outs.</p>
             <div class="example">
-              <strong>Example project</strong>
-              <p>Spatial validation: held out complete regions and belts to test whether model performance survives real geographic separation.</p>
-              <p class="contribution"><b>My contribution:</b> I used spatial and leave-one-site-out validation because random splits can overstate performance when nearby samples share the same geological context.</p>
+              <strong>Example</strong>
+              <p>FE&sup2; checked against fully meshed simulations; ML held out by whole region, deposit or later period, never random rows.</p>
             </div>
           </article>
           <article class="skill-card">
             <span>06</span>
             <h3>Communication</h3>
-            <p>Translate technical experiments into decisions, reports, dashboards, and reviewable handoffs.</p>
+            <p>Translate experiments into papers, reports and reviewable handoffs.</p>
             <div class="example">
-              <strong>Example project</strong>
-              <p>Research handoffs: created HTML reports, README files, plots, and methodology notes so others could inspect the workflow.</p>
-              <p class="contribution"><b>My contribution:</b> I made the reasoning reviewable: what data were used, how the experiment was run, which metric was used, and what conclusion was supported.</p>
+              <strong>Example</strong>
+              <p>Journal papers, technical reports and model cards that state what data were used, how the test was run and what conclusion it supports.</p>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="section contribution-section">
-        <div class="ml-background soft" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
+      <section id="publications" class="section publications-section">
         <div class="section-heading compact">
-          <p class="eyebrow">How I think</p>
-          <h2>Examples of experiment design</h2>
+          <p class="eyebrow">PhD and publications</p>
+          <h2>Peer-reviewed work and thesis</h2>
         </div>
-        <div class="experiment-grid">
-          <article>
-            <h3>Sampling design for ML evaluation</h3>
+        <article class="thesis-card">
+          <div>
+            <span class="tag">PhD thesis &middot; McMaster University &middot; 2024</span>
+            <h3>Application of deep learning in geotechnical engineering with a focus on constitutive models</h3>
             <p>
-              In mineral prospectivity work, I did not treat sampling as a small preprocessing detail. I tested how positive and
-              negative samples were selected, how spatial blocks were held out, and how model scores changed when validation became
-              more realistic.
+              Deep-learning constitutive models are only as reliable as their training data. The thesis develops and tests
+              methods to judge the quality, completeness and consistency of stress&ndash;strain databases, covering linear and
+              nonlinear elasticity, heterogeneity and load-path dependency, with complete, biased and distorted datasets,
+              and checks the learned models on well-documented geotechnical boundary-value problems.
             </p>
-            <ul class="solid-list">
-              <li><b>Question:</b> Is the model learning geology or memorizing spatial location?</li>
-              <li><b>Experiment:</b> Compare random splits with spatial holdout and leave-one-belt-out validation.</li>
-              <li><b>Contribution:</b> Showed when simple scores were misleading and when predictions were more defensible.</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Training data quality in PhD research</h3>
-            <p>
-              In my PhD, I studied why some neural constitutive models fail even when the architecture is powerful. I focused on
-              whether the training data actually contains the elastic and plastic information needed for path-dependent prediction.
-            </p>
-            <ul class="solid-list">
-              <li><b>Question:</b> What must a stress-strain dataset contain for ML to learn material behavior?</li>
-              <li><b>Experiment:</b> Generate controlled datasets with different elastic/plastic information and compare model behavior.</li>
-              <li><b>Contribution:</b> Shifted the focus from only model architecture to data quality and phase-space design.</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Transfer learning across sites</h3>
-            <p>
-              For geoscience AI, I tested whether models trained on one geological region can help in another. The important part was
-              not only whether transfer worked, but identifying when it failed and why.
-            </p>
-            <ul class="solid-list">
-              <li><b>Question:</b> Which sites are useful donors for a new target area?</li>
-              <li><b>Experiment:</b> Train on different belts, test on unseen belts, then compare hard donor selection and soft weighting.</li>
-              <li><b>Contribution:</b> Demonstrated that more data is not always better; donor relevance and target similarity matter.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="projects" class="section dark-section">
-        <div class="section-heading compact">
-          <p class="eyebrow">Applied ML projects</p>
-          <h2>Recent work at 4Point AI</h2>
-        </div>
-        <div class="workflow concise">
-          <article>
-            <span class="step-number">A</span>
-            <h3>Mineral prospectivity</h3>
-            <p>Built models using geology, geophysics, geochemistry, drilling, DEM, raster, and structural features.</p>
-          </article>
-          <article>
-            <span class="step-number">B</span>
-            <h3>Transfer learning</h3>
-            <p>Tested how gold-belt models transfer across sites and when donor data improves or weakens predictions.</p>
-          </article>
-          <article>
-            <span class="step-number">C</span>
-            <h3>MANFO data workflow</h3>
-            <p>Designed QA, feature engineering, desurveying support, voxel review, and reproducible handoff workflows.</p>
-          </article>
-          <article>
-            <span class="step-number">D</span>
-            <h3>Model reliability</h3>
-            <p>Separated real geological signal from shortcuts using spatial validation, SHAP, map AUC, and uncertainty maps.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="research" class="section split-section">
-        <div class="section-heading compact">
-          <p class="eyebrow">PhD research</p>
-          <h2>Scientific ML for mechanical simulation</h2>
-        </div>
-        <div class="split-grid concise">
-          <article class="plain-card">
-            <h3>Data</h3>
-            <p>Generated stress-strain and microstructure datasets from finite element simulations.</p>
-          </article>
-          <article class="plain-card">
-            <h3>Models</h3>
-            <p>Developed MLP, LSTM, data-driven homogenization, and hybrid AI-FEM workflows.</p>
-          </article>
-          <article class="plain-card">
-            <h3>Contribution</h3>
-            <p>Studied how input design, loading history, and dataset quality affect scientific ML reliability.</p>
-          </article>
-        </div>
+          </div>
+          <a class="button dark" href="https://macsphere.mcmaster.ca/items/38695e9d-89a5-46af-b3f7-ad888622fa15" target="_blank" rel="noopener">Read the thesis &#8599;</a>
+        </article>
+        <ol class="pub-list">
+          <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:NMxIlDl6LWMC" target="_blank" rel="noopener">An algorithm for cohesive crack propagation in variably saturated porous media via a time sub-stepping scheme</a>
+            <span>Mokhtari Varnosfaderani, Motevali Haghighi, Gatmiri, Na &middot; <i>Acta Geotechnica</i> 19(6), 2024</span>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:hMod-77fHWUC" target="_blank" rel="noopener">Revisiting preparation of phase space for learning path-dependent behavior via deep neural networks</a>
+            <span>Motevali Haghighi, Na &middot; <i>Journal of Engineering Mechanics</i> 148(12), 2022</span>
+          </li>
+          <li>
+            <a href="https://arxiv.org/abs/2204.01466" target="_blank" rel="noopener">A single long short-term memory network for enhancing the prediction of path-dependent plasticity with material heterogeneity and anisotropy</a>
+            <span>Motevali Haghighi, Na &middot; arXiv:2204.01466, 2022</span>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:isC4tDSrTZIC" target="_blank" rel="noopener">A multifeatured data-driven homogenization for heterogeneous elastic solids</a>
+            <span>Motevali Haghighi, Na &middot; <i>Applied Sciences</i> 11(19), 2021</span>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:bEWYMUwI8FkC" target="_blank" rel="noopener">Investigation of climate change on unsaturated porous media via a discrete thermo-hydro-mechanical model</a>
+            <span>Varnosfaderani, Motevali Haghighi, Gatmiri, Na &middot; <i>Applied Sciences</i> 11(16), 2021</span>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:BqipwSGYUEgC" target="_blank" rel="noopener">Phenomenological evaluation of soil-water retention behavior via deep learning</a>
+            <span>Motevali Haghighi, Na &middot; 74th Canadian Geotechnical Conference, 2021</span>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener">A model for moisture and heat flow in fractured unsaturated porous media</a>
+            <span>Varnosfaderani, Gatmiri, Motevali Haghighi &middot; <i>Int. J. for Numerical and Analytical Methods in Geomechanics</i>, 2017</span>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=JEr0hi8AAAAJ&amp;citation_for_view=JEr0hi8AAAAJ:blknAaTinKkC" target="_blank" rel="noopener">Propagation of cohesive crack in unsaturated porous media by use of XFEM method</a>
+            <span>Mokhtari, Motevali Haghighi, Gatmiri &middot; <i>E3S Web of Conferences</i> 9, 2016</span>
+          </li>
+        </ol>
+        <p class="pub-more">
+          <a class="button dark" href="https://scholar.google.com/citations?user=JEr0hi8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Full Google Scholar profile &#8599;</a>
+        </p>
       </section>
 
       <section class="section systems-section">
         <div class="section-heading compact">
-          <p class="eyebrow">Methods</p>
+          <p class="eyebrow">Toolkit</p>
           <h2>Tools I use</h2>
         </div>
         <div class="systems-grid concise">
           <div class="system-column">
-            <h3>ML</h3>
-            <p>Python, scikit-learn, TensorFlow, Keras, PyTorch, SHAP, ROC/AUC, transfer learning.</p>
+            <h3>Physics and numerics</h3>
+            <p>FEM, XFEM, FE&sup2;, poromechanics, fracture, multiscale homogenisation, reduced-order models, hybrid AI&ndash;FEM.</p>
           </div>
           <div class="system-column">
-            <h3>Scientific data</h3>
-            <p>Geoscience tables, rasters, drillholes, geochemistry, geophysics, finite element simulation data.</p>
+            <h3>Machine learning</h3>
+            <p>Python, PyTorch, TensorFlow/Keras, scikit-learn, XGBoost/CatBoost, TabPFN, SHAP; LSTM, GRU, transformers, graph and neural-process models.</p>
           </div>
           <div class="system-column">
-            <h3>Physics</h3>
-            <p>FEM, XFEM, FE2, fracture modeling, porous media, multiscale simulation, hybrid AI-FEM.</p>
+            <h3>Spatial data and statistics</h3>
+            <p>Drill holes, assays, rasters, geophysics, stream chemistry; kriging, Gaussian processes, survival models, conformal prediction, spatial validation.</p>
           </div>
         </div>
       </section>
@@ -295,6 +438,24 @@
           <p class="section-lead">Annotated Jupyter notebooks with code and results, plus overviews of my research areas.</p>
         </div>
         <div class="link-grid">
+          <a class="link-card area" href="Scientific_Machine_Learning.html">
+            <span class="tag">Area</span>
+            <h3>Scientific machine learning</h3>
+            <p>Physics-informed, black-box and model-free approaches for physical systems.</p>
+            <span class="arrow">View area &rarr;</span>
+          </a>
+          <a class="link-card area" href="Computational_Mechanics.html">
+            <span class="tag">Area</span>
+            <h3>Computational mechanics</h3>
+            <p>Porous media, constitutive modelling, multiscale simulation and fracture.</p>
+            <span class="arrow">View area &rarr;</span>
+          </a>
+          <a class="link-card area" href="Artificial-Intelligence.html">
+            <span class="tag">Area</span>
+            <h3>Machine learning and data engineering</h3>
+            <p>Applied ML, LLMs, MLOps and cloud data pipelines.</p>
+            <span class="arrow">View area &rarr;</span>
+          </a>
           <a class="link-card" href="Project1.html">
             <span class="tag">Notebook</span>
             <h3>Rule-based recommender system</h3>
@@ -313,44 +474,27 @@
             <p>Training and deploying a semantic segmentation model in the cloud.</p>
             <span class="arrow">Open notebook &rarr;</span>
           </a>
-          <a class="link-card area" href="Artificial-Intelligence.html">
-            <span class="tag">Area</span>
-            <h3>Machine learning and data engineering</h3>
-            <p>Applied ML, LLMs, MLOps and cloud data pipelines.</p>
-            <span class="arrow">View area &rarr;</span>
-          </a>
-          <a class="link-card area" href="Scientific_Machine_Learning.html">
-            <span class="tag">Area</span>
-            <h3>Scientific machine learning</h3>
-            <p>Physics-informed, black-box and model-free approaches for physical systems.</p>
-            <span class="arrow">View area &rarr;</span>
-          </a>
-          <a class="link-card area" href="Computational_Mechanics.html">
-            <span class="tag">Area</span>
-            <h3>Computational mechanics</h3>
-            <p>Porous media, constitutive modelling, multiscale simulation and fracture.</p>
-            <span class="arrow">View area &rarr;</span>
-          </a>
         </div>
       </section>
 
       <section class="closing">
-        <h2>Portfolio theme</h2>
-        <p>Prepare the data carefully. Build the model honestly. Test whether it learned the science.</p>
+        <h2>How I approach modelling</h2>
+        <p>Write down the physics. Prepare the data carefully. Build the model honestly. Test whether it learned the science.</p>
       </section>
 
       <section id="contact" class="section contact-section">
         <div class="contact-inner">
           <div>
             <p class="eyebrow">Contact</p>
-            <h2>Let's talk about your data problem.</h2>
+            <h2>Let's talk about your modelling problem.</h2>
             <p class="section-lead">
-              Open to ML research engineer, scientific ML and geoscience AI roles, and to collaborations on physical or
-              geospatial data.
+              Open to roles and collaborations in scientific machine learning, computational mechanics, ML research
+              engineering and geoscience AI.
             </p>
           </div>
           <div class="contact-actions">
             <a class="button primary" href="mailto:ehsan.motevali.haghighi@gmail.com">Email me</a>
+            <a class="button dark" href="https://scholar.google.com/citations?user=JEr0hi8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
             <a class="button dark" href="https://github.com/ehsan-moteval-haghighi" target="_blank" rel="noopener">GitHub</a>
             <span class="contact-email">ehsan.motevali.haghighi@gmail.com</span>
           </div>
@@ -360,9 +504,15 @@
 
     <footer>
       <span>&copy; <span id="year">2026</span> Ehsan Motevali Haghighi</span>
-      <span>Machine Learning - Scientific Data - Geoscience AI</span>
+      <span>Computational Mechanics &middot; Scientific ML &middot; Geoscience AI</span>
     </footer>
 
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+      onload="renderMathInElement(document.getElementById('methods'), { delimiters: [{ left: '$$', right: '$$', display: true }], throwOnError: false })"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
