@@ -1,131 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summary!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body, main, .sidebar {
-            font-family: 'Roboto', sans-serif;
-        }
-        .content h2 {
-            font-weight: 700;
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-        .content p {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .sidebar h2 {
-            font-weight: 700;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-        .sidebar ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .sidebar ul li {
-            margin-bottom: 10px;
-        }
-        .sidebar ul li a {
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 14px;
-            color: #000;
-        }
-        .submenu {
-            padding-left: 20px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <img src="IMG_4420.jpg" alt="Your Image" class="header-img">
-            <div class="header-text">
-                <h1>Ehsan Motevali Haghighi</h1>
-                <p>Soft Computing</p>
-            </div>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Machine learning and data engineering - Ehsan Motevali Haghighi</title>
+    <meta name="description" content="Machine learning and data engineering projects by Ehsan Motevali Haghighi: recommender systems, LLM fine-tuning, computer vision, MLOps and cloud data pipelines." />
+    <meta name="theme-color" content="#111a20" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">EMH</span>
+        <span>Machine Learning Portfolio</span>
+      </a>
+      <nav>
+        <a href="index.html#skills">ML Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#notebooks">Notebooks</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+      </nav>
     </header>
-    <main>
-        <div class="sidebar">
-            <h2>Projects</h2>
-            <ul>    
-                <li><a href="index.html">First Page</a></li>
-                <li><a href="Artificial-Intelligence.html">Machine Learning and Data Engineering</a></li>
-                <ul class="submenu">
-                    <li><a href="Project1.html">Rule Based Recommender System</a></li>
-                    <li><a href="Project2.html">LLM Project to Build and Fine Tune a Large Language Model</a></li>
-                    <li><a href="Project3.html">MLOps Project to Build Search Relevancy Algorithm with SBERT</a></li>
-                    <li><a href="Project4.html">Build an Image Segmentation Model using Amazon SageMaker</a></li>
-                    <li><a href="Project5.html">AWS Project to Build and Deploy LSTM Model with Sagemaker</a></li>
-                    <li><a href="Project6.html">Build an End-to-End AWS SageMaker Classification Model</a></li>
-                    <li><a href="Project7.html">Build Deep Autoencoders Model for Anomaly Detection in Python</a></li>
-                    <li><a href="Project8.html">Learn to Build Generative Models Using PyTorch Autoencoders</a></li>
-                    <li><a href="Project9.html">Build a Langchain Streamlit Chatbot for EDA using LLMs</a></li>
-                    <li><a href="Project10.html">End-to-End Snowflake Healthcare Analytics Project on AWS-1</a></li>
-                    <li><a href="Project11.html">End-to-End Snowflake Healthcare Analytics Project on AWS-2</a></li>
-                    <li><a href="Project12.html">End-to-End ML Model Monitoring using Airflow and Docker</a></li>
-                    <li><a href="Project13.html">Build CI/CD Pipeline for Machine Learning Projects using Jenkins</a></li>
-                    <li><a href="Project14.html">Langchain Project for Customer Support App in Python</a></li>
-                    <li><a href="Project15.html">Llama2 Project for MetaData Generation using FAISS and RAGs</a></li>
-                    <li><a href="Project16.html">Build CNN Image Classification Models for Real Time Prediction</a></li>
-                    <li><a href="Project17.html">Build a Review Classification Model using Gated Recurrent Unit</a></li>
-                    <li><a href="Project18.html">Word2Vec and FastText Word Embedding with Gensim in Python</a></li>
-                    <li><a href="Project19.html">Multi-Class Text Classification with Deep Learning using BERT</a></li>
-                    <li><a href="Project20.html">Build a Text Classification Model with Attention Mechanism NLP</a></li>
-                    <li><a href="Project21.html">Learn to Build an End-to-End Machine Learning Pipeline - Part 1</a></li>
-                    <li><a href="Project22.html">Learn to Build an End-to-End Machine Learning Pipeline - Part 2</a></li>
-                    <li><a href="Project23.html">Deep Learning Project for Beginners with Source Code Part 1</a></li>
-                    <li><a href="Project24.html">Azure Stream Analytics for Real-Time Cab Service Monitoring</a></li>
-                    <li><a href="Project25.html">Build Serverless Pipeline using AWS CDK and Lambda in Python</a></li>
-                    <li><a href="Project26.html">Build an ETL Pipeline on EMR using AWS CDK and Power BI</a></li>
-                    <li><a href="Project27.html">AWS CDK and IoT Core for Migrating IoT-Based Data to AWS</a></li>
-                    <li><a href="Project28.html">Migration of MySQL Databases to Cloud AWS using AWS DMS</a></li>
-                    <li><a href="Project29.html">AWS CDK Project for Building Real-Time IoT Infrastructure</a></li>
-                    <li><a href="Project30.html">Build an Incremental ETL Pipeline with AWS CDK</a></li>
-                    <li><a href="Project31.html">Build an ETL Pipeline for Financial Data Analytics on GCP-IaC</a></li>
-                    <li><a href="Project32.html">Databricks Real-Time Streaming with Event Hubs and Snowflake</a></li>
-                    <li><a href="Project33.html">Azure Data Factory and Databricks End-to-End Project</a></li>
-                    <li><a href="Project34.html">Movielens Dataset Analysis on Azure</a></li>
-                    <li><a href="Project35.html">Analyse Yelp Dataset with Spark & Parquet Format on Azure Databricks</a></li>
-                    <li><a href="Project36.html">Build a Scalable Event Based GCP Data Pipeline using DataFlow</a></li>
-                    <li><a href="Project37.html">GCP Data Ingestion with SQL using Google Cloud Dataflow</a></li>
-                    <li><a href="Project38.html">Orchestrate Redshift ETL using AWS Glue and Step Functions</a></li>
-                    <li><a href="Project39.html">Build a Real-Time Spark Streaming Pipeline on AWS using Scala</a></li>
-                    <li><a href="Project40.html">Build an AWS ETL Data Pipeline in Python on YouTube Data</a></li>
-                    <li><a href="Project41.html">Hands-On Real Time PySpark Project for Beginners</a></li>
-                    <li><a href="Project42.html">SQL Project for Data Analysis using Oracle Database-Part 2</a></li>
-                    <li><a href="Project43.html">SQL Project for Data Analysis using Oracle Database-Part 1</a></li>
-                    <li><a href="Project44.html">SQL Project for Data Analysis using Oracle Database-Part 5</a></li>
-                    <li><a href="Project45.html">PySpark Project to Learn Advanced DataFrame Concepts</a></li>
-                    <li><a href="Project46.html">PySpark ETL Project for Real-Time Data Processing</a></li>
-                    <li><a href="Project47.html">Build a real-time Streaming Data Pipeline using Flink and Kinesis</a></li>
-                    <li><a href="Project48.html">Graph Database Modelling using AWS Neptune and Gremlin</a></li>
-                    <li><a href="Project49.html">Build an Analytical Platform for eCommerce using AWS Services</a></li>
-                    <li><a href="Project50.html">GCP Project-Build Pipeline using Dataflow Apache Beam Python</a></li>
-                    <li><a href="Project51.html">Airline Dataset Analysis using PySpark GraphFrames in Python</a></li>
-                    <li><a href="Project52.html">Build Streaming Data Pipeline using Azure Stream Analytics</a></li>
-                    <li><a href="Project53.html">SQL Project for Data Analysis using Oracle Database-Part 4</a></li>
-        </ul>
-                </ul>
-            </ul>
+    <main id="main">
+      <section class="page-hero">
+        <div class="page-hero-inner">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Research areas</p>
+        <p class="eyebrow">Research area</p>
+        <h1>Machine learning and data engineering</h1>
+        <p class="lead">Hands-on projects across applied ML, large language models, MLOps and cloud data pipelines. Each notebook includes a summary and the key code.</p>
         </div>
-        <div class="content">
-            <h2>Summary!</h2>
-            <p>This page offers a concise overview of my work and experience in machine learning and 
-                data science engineering. You can access the details of my projects via the left menu. Each project includes a summary and 
-                key coding insights. I welcome your feedback to enhance the content and ensure it is valuable to all visitors.</p>
+      </section>
+      <section class="section notebooks-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Notebooks</p>
+          <h2>Published project notebooks</h2>
         </div>
+        <div class="link-grid">
+          <a class="link-card" href="Project1.html">
+            <span class="tag">Notebook</span>
+            <h3>Rule-based recommender system</h3>
+            <p>Association rules and market-basket analysis to generate product recommendations.</p>
+            <span class="arrow">Open notebook &rarr;</span>
+          </a>
+          <a class="link-card" href="Project2.html">
+            <span class="tag">Notebook</span>
+            <h3>Fine-tuning a large language model</h3>
+            <p>Adapting and aligning a pretrained LLM to a downstream task.</p>
+            <span class="arrow">Open notebook &rarr;</span>
+          </a>
+          <a class="link-card" href="Project4.html">
+            <span class="tag">Notebook</span>
+            <h3>Image segmentation on Amazon SageMaker</h3>
+            <p>Training and deploying a semantic segmentation model in the cloud.</p>
+            <span class="arrow">Open notebook &rarr;</span>
+          </a>
+        </div>
+      </section>
+      <section class="section split-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Topics</p>
+          <h2>What this area covers</h2>
+        </div>
+        <div class="topic-grid">
+          <article>
+            <h3>Machine learning and deep learning</h3>
+            <p>Recommender systems, CNN image classification, autoencoders for anomaly detection and generative modelling, and GRU / attention / BERT models for text.</p>
+          </article>
+          <article>
+            <h3>Large language models</h3>
+            <p>Fine-tuning and aligning LLMs, retrieval-augmented generation with FAISS, and LangChain applications for chat and exploratory data analysis.</p>
+          </article>
+          <article>
+            <h3>MLOps and deployment</h3>
+            <p>Model training and deployment on Amazon SageMaker, CI/CD for ML with Jenkins, and model monitoring with Airflow and Docker.</p>
+          </article>
+          <article>
+            <h3>Data engineering</h3>
+            <p>ETL and streaming pipelines on AWS, Azure and GCP with Spark, Databricks, Snowflake, Kinesis, Flink and infrastructure as code.</p>
+          </article>
+        </div>
+        <p class="status-note">More project notebooks will be published here over time.</p>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2024 Ehsan Motevali Haghighi. All rights reserved.</p>
+      <span>&copy; <span id="year">2026</span> Ehsan Motevali Haghighi</span>
+      <span><a href="mailto:ehsan.motevali.haghighi@gmail.com">Email</a> &middot; <a href="https://github.com/ehsan-moteval-haghighi" target="_blank" rel="noopener">GitHub</a></span>
     </footer>
-</body>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
 </html>

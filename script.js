@@ -4,6 +4,9 @@ const ctx = canvas.getContext("2d");
 const points = [];
 const palette = ["#f4c77a", "#7cc7c9", "#89a36b", "#ffffff"];
 let pulse = 0;
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let animate = !reduceMotion;
+let rafId = null;
 
 function resizeCanvas() {
   const dpr = window.devicePixelRatio || 1;
@@ -98,13 +101,29 @@ function drawNetwork() {
     ctx.fill();
   }
 
-  requestAnimationFrame(drawNetwork);
+  rafId = animate ? requestAnimationFrame(drawNetwork) : null;
 }
 
+let resizeTimer;
 window.addEventListener("resize", () => {
-  resizeCanvas();
-  seedPoints();
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    resizeCanvas();
+    seedPoints();
+    if (!animate) drawNetwork();
+  }, 150);
 });
+
+// Pause the animation while the hero is off-screen to save CPU/battery.
+if (!reduceMotion && "IntersectionObserver" in window) {
+  new IntersectionObserver(([entry]) => {
+    animate = entry.isIntersecting;
+    if (animate && rafId === null) rafId = requestAnimationFrame(drawNetwork);
+  }).observe(canvas);
+}
+
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 resizeCanvas();
 seedPoints();

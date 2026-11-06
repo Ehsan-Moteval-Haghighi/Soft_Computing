@@ -8,9 +8,17 @@
       name="description"
       content="Machine learning portfolio for Ehsan Motevali Haghighi, focused on data preparation, model development, uncertainty, QC, evaluation, and scientific ML."
     />
+    <meta name="theme-color" content="#111a20" />
+    <meta property="og:title" content="Ehsan Motevali Haghighi - Machine Learning Portfolio" />
+    <meta property="og:description" content="ML Research Engineer for scientific and geospatial data: data preparation, model development, uncertainty, QC and evaluation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ehsan-moteval-haghighi.github.io/Soft_Computing/" />
+    <meta property="og:image" content="https://ehsan-moteval-haghighi.github.io/Soft_Computing/assets/profile.jpg" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#top">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="#top">
         <span class="brand-mark">EMH</span>
@@ -20,6 +28,8 @@
         <a href="#skills">ML Skills</a>
         <a href="#projects">Projects</a>
         <a href="#research">Research</a>
+        <a href="#notebooks">Notebooks</a>
+        <a href="#contact" class="nav-cta">Contact</a>
       </nav>
     </header>
 
@@ -36,16 +46,13 @@
           <div class="hero-actions">
             <a class="button primary" href="#fit">Why hire me</a>
             <a class="button" href="#projects">View projects</a>
+            <a class="button" href="#contact">Get in touch</a>
           </div>
         </div>
 
         <aside class="portrait-card" aria-label="Profile photo area">
           <div class="mountain-photo">
-            <img src="assets/profile.jpg" alt="Ehsan Motevali Haghighi" onerror="this.classList.add('missing')" />
-            <div class="photo-fallback">
-              <span>Profile photo</span>
-              <small>Add your photo as assets/profile.jpg</small>
-            </div>
+            <img src="assets/profile.jpg" alt="Ehsan Motevali Haghighi" width="420" height="420" onerror="this.classList.add('missing')" />
           </div>
           <div class="portrait-caption">
             <strong>Ehsan Motevali Haghighi</strong>
@@ -281,14 +288,78 @@
         </div>
       </section>
 
+      <section id="notebooks" class="section notebooks-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Explore further</p>
+          <h2>Notebooks and research areas</h2>
+          <p class="section-lead">Annotated Jupyter notebooks with code and results, plus overviews of my research areas.</p>
+        </div>
+        <div class="link-grid">
+          <a class="link-card" href="Project1.html">
+            <span class="tag">Notebook</span>
+            <h3>Rule-based recommender system</h3>
+            <p>Association rules and market-basket analysis to generate product recommendations.</p>
+            <span class="arrow">Open notebook &rarr;</span>
+          </a>
+          <a class="link-card" href="Project2.html">
+            <span class="tag">Notebook</span>
+            <h3>Fine-tuning a large language model</h3>
+            <p>Adapting and aligning a pretrained LLM to a downstream task.</p>
+            <span class="arrow">Open notebook &rarr;</span>
+          </a>
+          <a class="link-card" href="Project4.html">
+            <span class="tag">Notebook</span>
+            <h3>Image segmentation on Amazon SageMaker</h3>
+            <p>Training and deploying a semantic segmentation model in the cloud.</p>
+            <span class="arrow">Open notebook &rarr;</span>
+          </a>
+          <a class="link-card area" href="Artificial-Intelligence.html">
+            <span class="tag">Area</span>
+            <h3>Machine learning and data engineering</h3>
+            <p>Applied ML, LLMs, MLOps and cloud data pipelines.</p>
+            <span class="arrow">View area &rarr;</span>
+          </a>
+          <a class="link-card area" href="Scientific_Machine_Learning.html">
+            <span class="tag">Area</span>
+            <h3>Scientific machine learning</h3>
+            <p>Physics-informed, black-box and model-free approaches for physical systems.</p>
+            <span class="arrow">View area &rarr;</span>
+          </a>
+          <a class="link-card area" href="Computational_Mechanics.html">
+            <span class="tag">Area</span>
+            <h3>Computational mechanics</h3>
+            <p>Porous media, constitutive modelling, multiscale simulation and fracture.</p>
+            <span class="arrow">View area &rarr;</span>
+          </a>
+        </div>
+      </section>
+
       <section class="closing">
         <h2>Portfolio theme</h2>
         <p>Prepare the data carefully. Build the model honestly. Test whether it learned the science.</p>
       </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="contact-inner">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Let's talk about your data problem.</h2>
+            <p class="section-lead">
+              Open to ML research engineer, scientific ML and geoscience AI roles, and to collaborations on physical or
+              geospatial data.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="button primary" href="mailto:ehsan.motevali.haghighi@gmail.com">Email me</a>
+            <a class="button dark" href="https://github.com/ehsan-moteval-haghighi" target="_blank" rel="noopener">GitHub</a>
+            <span class="contact-email">ehsan.motevali.haghighi@gmail.com</span>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-      <span>Ehsan Motevali Haghighi</span>
+      <span>&copy; <span id="year">2026</span> Ehsan Motevali Haghighi</span>
       <span>Machine Learning - Scientific Data - Geoscience AI</span>
     </footer>
 

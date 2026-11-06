@@ -1,87 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summary!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body, main, .sidebar {
-            font-family: 'Roboto', sans-serif;
-        }
-        .content h2 {
-            font-weight: 700;
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-        .content p {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .sidebar h2 {
-            font-weight: 700;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-        .sidebar ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .sidebar ul li {
-            margin-bottom: 10px;
-        }
-        .sidebar ul li a {
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 14px;
-            color: #000;
-        }
-        .submenu {
-            padding-left: 20px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <img src="IMG_4420.jpg" alt="Your Image" class="header-img">
-            <div class="header-text">
-                <h1>Ehsan Motevali Haghighi</h1>
-                <p>Soft Computing</p>
-            </div>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Computational mechanics - Ehsan Motevali Haghighi</title>
+    <meta name="description" content="Computational mechanics research by Ehsan Motevali Haghighi: porous media, constitutive modelling, multiscale simulation and fracture mechanics." />
+    <meta name="theme-color" content="#111a20" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">EMH</span>
+        <span>Machine Learning Portfolio</span>
+      </a>
+      <nav>
+        <a href="index.html#skills">ML Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#notebooks">Notebooks</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+      </nav>
     </header>
-    <main>
-        <div class="sidebar">
-            <h2>Projects</h2>
-            <ul>    
-                <li><a href="index.html">First Page</a></li>
-                <li><a href="Computational_Mechanics.html">Computational Mechanics</a></li>
-                <ul class="submenu">
-                    <li><a href="">Porous Media</a></li>
-                    <li><a href="">Constitutive Modelling</a></li>
-                    <li><a href="">Multiscale Simulation</a></li>
-                    <li><a href="">Fracture Mechanics</a></li>
-        </ul>
-                </ul>
-            </ul>
+    <main id="main">
+      <section class="page-hero">
+        <div class="page-hero-inner">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Research areas</p>
+        <p class="eyebrow">Research area</p>
+        <h1>Computational mechanics</h1>
+        <p class="lead">Numerical modelling of materials and structures using finite element methods, from the behaviour of porous media to fracture and multiscale simulation.</p>
         </div>
-        <div class="content">
-            <h2>Summary!</h2>
-            <p>This page provides a summary of my experience in computational mechanics. The projects are categorized into the following areas:<br>
-                <br>
-                (1) Porous Mechanics<br>
-                (2) Constitutive Modeling<br>
-                (3) Multiscale Simulation<br>
-                (4) Fracture Mechanics<br>
-                <br>
-                In each section, you will find a summary of the projects and the implemented code.</p>
+      </section>
+      <section class="section split-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Topics</p>
+          <h2>What this area covers</h2>
         </div>
+        <div class="topic-grid">
+          <article>
+            <h3>Porous media</h3>
+            <p>Coupled modelling of fluid flow and deformation in porous materials.</p>
+          </article>
+          <article>
+            <h3>Constitutive modelling</h3>
+            <p>Elastic and plastic material models for path-dependent behaviour, and the data needed to calibrate or learn them.</p>
+          </article>
+          <article>
+            <h3>Multiscale simulation</h3>
+            <p>FE&sup2; and homogenization approaches that link microstructure to macroscopic response.</p>
+          </article>
+          <article>
+            <h3>Fracture mechanics</h3>
+            <p>Crack initiation and propagation with XFEM and related fracture modelling techniques.</p>
+          </article>
+        </div>
+        <p class="status-note">Detailed write-ups and code for each topic are in progress.</p>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2024 Ehsan Motevali Haghighi. All rights reserved.</p>
+      <span>&copy; <span id="year">2026</span> Ehsan Motevali Haghighi</span>
+      <span><a href="mailto:ehsan.motevali.haghighi@gmail.com">Email</a> &middot; <a href="https://github.com/ehsan-moteval-haghighi" target="_blank" rel="noopener">GitHub</a></span>
     </footer>
-</body>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
 </html>

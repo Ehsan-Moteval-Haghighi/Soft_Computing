@@ -1,80 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summary!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body, main, .sidebar {
-            font-family: 'Roboto', sans-serif;
-        }
-        .content h2 {
-            font-weight: 700;
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-        .content p {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .sidebar h2 {
-            font-weight: 700;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-        .sidebar ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .sidebar ul li {
-            margin-bottom: 10px;
-        }
-        .sidebar ul li a {
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 14px;
-            color: #000;
-        }
-        .submenu {
-            padding-left: 20px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <img src="IMG_4420.jpg" alt="Your Image" class="header-img">
-            <div class="header-text">
-                <h1>Ehsan Motevali Haghighi</h1>
-                <p>Soft Computing</p>
-            </div>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scientific machine learning - Ehsan Motevali Haghighi</title>
+    <meta name="description" content="Scientific machine learning research by Ehsan Motevali Haghighi: physics-informed, black-box and model-free modelling, and ML acceleration of numerical simulation." />
+    <meta name="theme-color" content="#111a20" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">EMH</span>
+        <span>Machine Learning Portfolio</span>
+      </a>
+      <nav>
+        <a href="index.html#skills">ML Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#notebooks">Notebooks</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+      </nav>
     </header>
-    <main>
-        <div class="sidebar">
-            <h2>Projects</h2>
-            <ul>    
-                <li><a href="index.html">First Page</a></li>
-                <li><a href="Scientific_Machine_Learning.html">Scientific Machine Learning (SciML)</a></li>
-                <ul class="submenu">
-                    <li><a href="">Physically Informed Modeling</a></li>
-                    <li><a href="">Black-Box Modeling</a></li>
-                    <li><a href="">Model-Free Modeling</a></li>
-                    <li><a href="">Acceleration of Numerical Modelling</a></li>
-        </ul>
-                </ul>
-            </ul>
+    <main id="main">
+      <section class="page-hero">
+        <div class="page-hero-inner">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Research areas</p>
+        <p class="eyebrow">Research area</p>
+        <h1>Scientific machine learning</h1>
+        <p class="lead">Combining physics-based simulation with machine learning to model complex material and physical systems, with a focus on whether the model actually learns the underlying science.</p>
         </div>
-        <div class="content">
-            <h2>Summary!</h2>
-            <p>
+      </section>
+      <section class="section split-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Topics</p>
+          <h2>What this area covers</h2>
         </div>
+        <div class="topic-grid">
+          <article>
+            <h3>Physics-informed modelling</h3>
+            <p>Embedding physical laws and constraints into neural models so predictions stay consistent with mechanics.</p>
+          </article>
+          <article>
+            <h3>Black-box modelling</h3>
+            <p>Data-driven surrogates such as MLP and LSTM models that learn path-dependent stress-strain behaviour from simulation data.</p>
+          </article>
+          <article>
+            <h3>Model-free modelling</h3>
+            <p>Data-driven computational mechanics that works directly with material data instead of a fitted constitutive law.</p>
+          </article>
+          <article>
+            <h3>Accelerating numerical models</h3>
+            <p>Hybrid AI-FEM and data-driven homogenization to replace expensive sub-scale computations in multiscale simulation.</p>
+          </article>
+        </div>
+        <p class="status-note">Detailed write-ups and code for each topic are in progress.</p>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2024 Ehsan Motevali Haghighi. All rights reserved.</p>
+      <span>&copy; <span id="year">2026</span> Ehsan Motevali Haghighi</span>
+      <span><a href="mailto:ehsan.motevali.haghighi@gmail.com">Email</a> &middot; <a href="https://github.com/ehsan-moteval-haghighi" target="_blank" rel="noopener">GitHub</a></span>
     </footer>
-</body>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
 </html>
